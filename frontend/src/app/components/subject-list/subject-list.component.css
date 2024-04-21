@@ -1,0 +1,63 @@
+.list {
+  margin-top: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.btn-outline-secondary {
+  background-color: #22c12a; /* Light blue border */
+  color: #0a0b0b;
+  text-align: center; /* Light blue text */
+}
+
+.btn-outline-secondary:hover {
+  background-color: #15d215; /* Light blue background on hover */
+  color: #bfc5c0; /* White text on hover */
+}
+
+.col-md-6 {
+  margin-top: 20px;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item.active {
+  background-color: #0c0c0c; /* Light blue background for active item */
+  color: #fff; /* White text for active item */
+}
+
+h4 {
+  color: #f2efef;
+  background-color: #0a0a0a;
+  text-align: center; /* Light blue text for headings */
+}
+
+.label strong {
+  color: #040404; /* Light blue text for strong tags */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Red button background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #ff6b75; /* Lighter red on hover */
+}
+
+p {
+  margin-top: 20px;
+}

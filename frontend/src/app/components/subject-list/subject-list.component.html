@@ -1,0 +1,86 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by Subject Code"
+        [(ngModel)]="code"
+        />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchCode()"
+        >
+          SEARCH
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4>SUBJECTS</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let subject of subjects; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveSubjects(subject, i)"
+      >
+        {{ subject.name }}
+      </li>
+    </ul>
+
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllSubjects()">
+      REMOVE ALL
+    </button>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentSubject">
+      <style>
+        .subject-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+
+        .subject-table tr:nth-child(odd) {
+          background-color: rgb(241, 236, 236);
+          color: rgb(10, 10, 10);
+        }
+
+        .subject-table tr:nth-child(even) {
+          background-color: rgb(250, 246, 246);
+          color: black;
+        }
+
+        .subject-table td {
+          padding: 8px;
+          border: 1px solid black;
+        }
+      </style>
+      <h4>SUBJECT DETAILS</h4>
+      <table class="subject-table">
+        <tr>
+          <td><strong>CODE :</strong></td>
+          <td>{{ currentSubject.code }}</td>
+        </tr>
+        <tr>
+          <td><strong>NAME :</strong></td>
+          <td>{{ currentSubject.name }}</td>
+        </tr>
+        <tr>
+          <td><strong>CREDITS :</strong></td>
+          <td>{{ currentSubject.credit }}</td>
+        </tr>
+      </table>
+      <a class="m-3 btn btn-sm btn-danger" routerLink="/subjects/{{ currentSubject.id }}">
+        Edit
+      </a>
+    </div>
+
+    <div *ngIf="!currentSubject">
+      <br />
+      <p>Click on a subject...</p>
+    </div>
+  </div>
+</div>

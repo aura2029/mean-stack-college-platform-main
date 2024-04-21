@@ -1,0 +1,59 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by Enroll Number"
+        [(ngModel)]="enrollmentSearch"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchEnrollment()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <h4>Student: {{ name }}</h4>
+    <h5>Subjects:</h5>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let subject of subjects; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveSubjects(subject, i)"
+      >
+        {{ subject.name }}
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="col-md-6">
+    <div *ngIf="currentSubject">
+      <h4>Subject</h4>
+      <div>
+        <label><strong>Code:</strong></label> {{ currentSubject.code }}
+      </div>
+      <div>
+        <label><strong>Name:</strong></label>
+        {{ currentSubject.name }}
+      </div>
+      <div>
+        <label><strong>Credits:</strong></label>
+        {{ currentSubject.credit }}
+      </div>
+    </div>
+
+    <div *ngIf="!currentSubject">
+      <br />
+
+    </div>
+  </div>
+</div>

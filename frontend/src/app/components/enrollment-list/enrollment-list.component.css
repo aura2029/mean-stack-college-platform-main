@@ -1,0 +1,57 @@
+.list {
+  margin-top: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.btn-outline-secondary {
+  border-color: #0f0f0f; /* Light blue border */
+  color: #0d0d0d;
+  background-color: #47b220; /* Light blue text */
+}
+
+.btn-outline-secondary:hover {
+  background-color: #dc1bbf; /* Light blue background on hover */
+  color: #100f0f; /* White text on hover */
+}
+
+.col-md-6 {
+  margin-top: 20px;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+/* Table-like styling */
+.list-group-item {
+  display: table-row; /* Display list items as table rows */
+  border-bottom: 1px solid #ccc; /* Add border between rows */
+  padding: 8px 16px; /* Adjust padding for better spacing */
+  background-color: white;
+}
+
+h4, h5 {
+  color: #f4ecec; /* Black text for headings */
+}
+
+.label {
+  font-weight: bold;
+  color: #faf4f4; /* Black text for label */
+}
+
+.label strong {
+  color: #e8e3e3; /* Black text for strong tags */
+}
+
+/* Alternate row background color for better readability */
+.list-group-item:nth-child{
+  background-color: #db2222;
+  color: #100f0f; /* Light gray background for even rows */
+}

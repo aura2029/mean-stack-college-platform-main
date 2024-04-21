@@ -1,0 +1,45 @@
+.edit-form {
+  background-color: #f8f3f3; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #080808; /* Light gray border */
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #101010; /* Light blue border when focused */
+}
+
+.btn-danger {
+  background-color: #090909; /* Red button background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #ff6b75; /* Lighter red on hover */
+}
+
+p {
+  margin-top: 20px;
+}

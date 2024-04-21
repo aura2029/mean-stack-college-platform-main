@@ -1,0 +1,41 @@
+.submit-form {
+  background-color: #f7f7f7; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #38d9a9; /* Light blue border when focused */
+}
+
+.btn-success {
+  background-color: #38d9a9; /* Light blue button background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #64ffda; /* Lighter blue on hover */
+}

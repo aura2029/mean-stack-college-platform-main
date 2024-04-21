@@ -1,0 +1,56 @@
+<div style="width: 400px; margin: auto;">
+  <div *ngIf="currentSubject" class="edit-form">
+    <h4>Subject</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Subject Code</label>
+        <input
+          type="text"
+          class="form-control"
+          id="code"
+          [(ngModel)]="currentSubject.code"
+          name="code"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Subject Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="currentSubject.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Credits</label>
+        <input
+          type="text"
+          class="form-control"
+          id="credit"
+          [(ngModel)]="currentSubject.credit"
+          name="credit"
+        />
+      </div>
+
+    </form>
+
+    <button class="m-3 btn btn-sm btn-danger" (click)="deleteSubject()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="m-3 btn btn-sm btn-danger"
+      (click)="updateSubject()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentSubject">
+    <br />
+    <p>Cannot access this Subject...</p>
+  </div>
+</div>
